@@ -16,7 +16,7 @@ class CreateMediacentersTable extends Migration
         Schema::create('mediacenters', function (Blueprint $table) {
             $table->Increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('path');
+            //$table->string('path');
             $table->string('title');
             $table->text('description');
             $table->text('url');

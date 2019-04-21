@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Mediacenter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Validator;
 use Auth;
 
 class MediacentersController extends Controller
@@ -29,8 +31,8 @@ class MediacentersController extends Controller
         $validator = \Validator::make($request->all(), [
                 'title' => ['bail', 'required', 'string', 'max:100'],
                 'descrip' => ['bail', 'required', 'string', 'max:255'],
-                'url' => ['bail', 'required', 'url'],
-                'photo' => ['bail', 'required', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
+                'url' => ['bail', 'required', 'url']
+                //'photo' => ['bail', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
         ]);
 
             if ($validator->fails()){
@@ -40,7 +42,7 @@ class MediacentersController extends Controller
 
             else{
 
-                if ($request->hasFile('photo')) {
+           /*     if ($request->hasFile('photo')) {
                     //Get Filename with extension
                     $filenameWithExtension = $request->file('photo')->getClientOriginalName();
                     //Get just the filename
@@ -56,16 +58,22 @@ class MediacentersController extends Controller
                }
                else{
                     $filenameToStore = 'noimage.jpg';
-               }
+               }  */
+               
+               $url = $request->input('url');
+
+               preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match);
+
+               $youtubeID = $match[1];
 
                Mediacenter::create([
-                        'title' => $request['title'],
-                        'description' => $request['descrip'],
-                        'url' => $request['url'],
-                        'path' => $filenameToStore,
-                        'user_id' => Auth::user()->id
+                'title' => $request['title'],
+                'description' => $request['descrip'],
+                'url' => 'https://www.youtube.com/embed/'.$youtubeID.'?rel=0',
+                //'path' => $filenameToStore,
+                'user_id' => Auth::user()->id
                ]);
-               return redirect()->route('media');
+               return redirect()->route('media')->with('success', 'Media Created successfully');;
            }
             
     }
@@ -101,11 +109,12 @@ class MediacentersController extends Controller
      */
     public function update(Request $request, $id=null)
     {
+            $media = Mediacenter::findOrFail($id);
         $validator = \Validator::make($request->all(), [
                 'title' => ['bail', 'required', 'string', 'max:100'],
                 'descrip' => ['bail', 'required', 'string', 'max:255'],
-                'url' => ['bail', 'required', 'url'],
-                'photo' => ['bail', 'required', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
+                'url' => ['bail', 'required', 'url']
+                //'photo' => ['bail', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
         ]);
 
             if ($validator->fails()){
@@ -114,32 +123,55 @@ class MediacentersController extends Controller
 
             else{
 
-                if ($request->hasFile('photo')) {
+        /*        if ($request->hasFile('photo')) {
+
+                    if($media->path !== 'noimage.jpg'){
+                        
+                        //Delete the formal image
+                        Storage::delete('public/media_images/'.$media->path);
+                    }
+                    
                     //Get Filename with extension
                     $filenameWithExtension = $request->file('photo')->getClientOriginalName();
+                    
                     //Get just the filename
                     $filename = pathinfo($filenameWithExtension, PATHINFO_FILENAME);
+                    
                     //Get just the extension
                     $extension = $request->file('photo')->getClientOriginalExtension();
 
                     //File to store
                     $filenameToStore = $filename.'_'.time().'.'.$extension;
+                    
                     //Upload Image
-                    $path = $request->file('photo')->storeAs('public/media_images', $filenameToStore);
+                    $path = $request->file('photo')->storeAs('public/media_images', $filenameToStore); 
 
                }
                else{
-                    $filenameToStore = 'noimage.jpg';
-               }
 
-               Mediacenter::create([
-                        'title' => $request['title'],
-                        'description' => $request['descrip'],
-                        'url' => $request['url'],
-                        'path' => $filenameToStore,
-                        'user_id' => Auth::user()->id
+                    if($media->path !== 'noimage.jpg'){
+                        
+                        //Delete the formal image
+                        Storage::delete('public/media_images/'.$media->path);
+                    }
+                    
+                    $filenameToStore = 'noimage.jpg';
+               }  */
+
+               $url = $request->input('url');
+
+               preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match);
+
+               $youtubeID = $match[1];
+
+               Mediacenter::where('id', $id)->update([
+                'title' => $request['title'],
+                'description' => $request['descrip'],
+                'url' => 'https://www.youtube.com/embed/'.$youtubeID.'?rel=0'
+                        //'path' => $filenameToStore,
+                        //'user_id' => Auth::user()->id
                ]);
-               return redirect()->route('media');
+               return redirect()->route('media')->with('success', 'Media Updated successfully');
            }
     }
 
@@ -149,8 +181,16 @@ class MediacentersController extends Controller
      * @param  \App\Mediacenter  $mediacenter
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mediacenter $mediacenter)
+    public function destroy($id=null)
     {
-        //
+        $media = Mediacenter::findOrFail($id);
+
+        /*if($media->path !== 'noimage.jpg'){
+            Storage::delete('public/media_images/'.$media->path);
+        }  */
+        //File::delete(public_path() . '/media_images/', $media->file->path);
+        $media->delete();  
+
+        return redirect()->route('media')->with('success', 'Media Deleted successfully');
     }
 }

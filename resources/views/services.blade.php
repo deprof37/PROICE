@@ -10,7 +10,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 style="color: white">Business Consulting</h2>
+            <h2 class="md" style="color: #d6cc70">BUSINESS CONSULTING</h2>
           </div>
         </div>
       </div>
@@ -71,15 +71,15 @@
     </div>
   </div>
 
-  <hr class="hr-primary" style="background-image: -webkit-linear-gradient(left, rgba(157,15,88,.8), rgba(157, 15, 88,.6), rgba(0,0,0,0)); height: 4px; margin-top:0px; margin-bottom:0px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
-  <div id="bus_auto" class="solution-area area-padding" style="background: #936c22; color:white;">
+  <div id="bus_auto" class="solution-area area-padding" style="background: #a2a4aa;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 style="color: white">Business Automation & Robotic Process Automation</h2>
+            <h2 class="md" style="color: black">BUSINESS AUTOMATION AND ROBOTIC PROCESS AUTOMATION</h2>
           </div>
         </div>
       </div>
@@ -123,16 +123,16 @@
     </div>
   </div>
 
-  <hr class="hr-primary" style="background-image: -webkit-linear-gradient(left, rgba(157,15,88,.8), rgba(157, 15, 88,.6), rgba(0,0,0,0)); height: 4px; margin-top:0px; margin-bottom:0px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
 
-  <div id="bus_digit" class="solution-area area-padding" style="background: #218278; color:white;">
+  <div id="bus_digit" class="solution-area area-padding" style="background: black">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 style="color: white">Digitization & Digital Transformation</h2>
+            <h2 class="md" style="color: #d6cc70">DIGITIZATION AND DIGITAL TRANSFORMATION</h2>
           </div>
         </div>
       </div>
@@ -187,16 +187,16 @@
     </div>
   </div>
 
-  <hr class="hr-primary" style="background-image: -webkit-linear-gradient(left, rgba(157,15,88,.8), rgba(157, 15, 88,.6), rgba(0,0,0,0)); height: 4px; margin-top:0px; margin-bottom:0px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
 
-  <div id="bus_train" class="solution-area area-padding" style="background: #1e1f70; color:white;">
+  <div id="bus_train" class="solution-area area-padding" style="background: white; color:white;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 style="color: white">Human Resources Consulting & Training Services</h2>
+            <h2 class="md" style="color: black">HUMAN RESOURCES CONSULTING AND TRAINING SERVICES</h2>
           </div>
         </div>
       </div>
@@ -214,30 +214,30 @@
           <div class="well-middle">
             <div class="single-well">
               
-              <p class="text-justify" style="color: white;">
+              <p class="text-justify" style="color: black;">
 			    		Organizations are increasingly facing political, technological, environmental economic disruptions, thereby requiring a new breed of workers who are agile-minded to tap into the opportunities this evolving environment presents.
 			    	</p>
-			    	<p class="text-justify" style="color: white;">
+			    	<p class="text-justify" style="color: black;">
 			    		At PRO-ICE, enabling, developing and sharing knowledge with people is at the core of our services. We are equipped with Business and IT labs that allow us to come up with unique training programs, packages tools that take care of the following for the organizations we serve;
                     <ul>
-                      <li style="color: white;">
+                      <li style="color: black;">
                         <i class="fa fa-check text-white"></i><strong>Digitization Processes Training</strong>
                       </li>
-                      <li style="color: white;">
+                      <li style="color: black;">
                         <i class="fa fa-check text-white"></i><strong>Business Process Optimization Training</strong>
                       </li>
-                      <li style="color: white;">
+                      <li style="color: black;">
                         <i class="fa fa-check text-white"></i><strong>Change Management and</strong>
                       </li>
-                      <li style="color: white;">
+                      <li style="color: black;">
                         <i class="fa fa-check text-white"></i><strong>Business Automation Training</strong>
                       </li>
                     </ul>
                   </p>
-                  <p class="text-justify" style="color: white;">
+                  <p class="text-justify" style="color: black;">
 			    		We are positioned to take advantage of the continuous merge between machines and AI, by designing and automating processes on behalf our clients.
                   </p>
-                  <p class="text-justify" style="color: white;">
+                  <p class="text-justify" style="color: black;">
 			    		With our global partner UI Path, we take your staff on a journey of business automation certifications, even as we also provide impeccably trained personnel to handle your digital and automated processes and software.
                   </p>
             </div>
@@ -247,13 +247,6 @@
       </div>
     </div>
   </div>
+<hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 40px; margin-top:0px; margin-bottom:3px">
 
-<div style="background: black; height: 40px; width: auto">
-    <div class="container">
-        <div class="row">
-        
-        </div>
-
-    </div>
-</div>
 @endsection

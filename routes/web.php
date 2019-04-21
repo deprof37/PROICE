@@ -29,3 +29,19 @@ Route::get('/media-show/{id?}', 'MediacentersController@show')->name('media-show
 Route::post('/media-save', 'MediacentersController@store')->name('media-save');
 
 Route::post('/media-update/{id?}', 'MediacentersController@update')->name('media-update');
+
+Route::any('/media-delete/{id?}', 'MediacentersController@destroy')->name('media-delete');
+
+Route::get('/partner', 'PartnerController@index')->name('partner');
+
+Route::get('/partner-create', 'PartnerController@create')->name('partner-create');
+
+Route::get('/partner-show/{id?}', 'PartnerController@show')->name('partner-show');
+
+Route::post('/partner-save', 'PartnerController@store')->name('partner-save');
+
+Route::post('/partner-update/{id?}', 'PartnerController@update')->name('partner-update');
+
+Route::any('/partner-delete/{id?}', 'PartnerController@destroy')->name('partner-delete');
+
+Route::get('/medias', 'PagesController@medias')->name('medias');

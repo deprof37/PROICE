@@ -65,7 +65,7 @@
                                     </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ route('/') }}">
-                  <h1 style="font-size: 22px; color: #bcba4b"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>PRO-ICE LIMITED</h1>
+                  <h1 class="md" style="font-size: 35px; color: #d6cc70"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
                                 </a>
@@ -101,7 +101,7 @@
                   </li>
 
                   <li>
-                    <a class="page-scroll" href="">Media Center</a>
+                    <a class="page-scroll" href="{{route('medias')}}">Media Center</a>
                   </li>
 
                   <li>
@@ -343,26 +343,29 @@
 
           <div class="col-md-3 wow fadeInUp">
             <div class="about-col">
+              <a href="{{ route('/services') }}#bus_auto">
                 <div class="img">
                     <img src="img/slider/slider2.jpg" alt="" class="img-fluid">
                 </div>
-              <h2 class="title " style="color:#757575; margin-top: 0px;">Business Automation & Robotic Process Automation</h2>
-              <p class="text-justify">
+              <h2 class="title mc" style="font-size:22px; color:#757575; margin-top: 0px;">Business Automation & <br>Robotic Process Automation</h2></a><br>
+            {{--  <p class="text-justify">
                 One of the ways we drive digital transformation at PRO-ICE LTD  is through the use of Robotic Process Automation (RPA), which is capable of supporting the coordination of a project team and company management — as well as all involved employees — is a key driver in success.
                 <br><br>
 
                 <a href="#" class="btn btn-primary">Read More...</a>
-              </p>
+              </p> --}}
             </div>
           </div>
 
           <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
+            <a href="{{ route('/services') }}#bus_consult">
               <div class="img">
                 <img src="img/slider/slider3.jpg" alt="" class="img-fluid">
               </div>
-              <h2 class="title" style="color:#757575; margin-top: 0px;">Business Consulting</h2>
-              <p class="text-justify">
+              <h2 class="title mc" style="font-size:22px; color:#757575; margin-top: 0px;">Business Consulting</h2>
+            </a><br>
+          {{--    <p class="text-justify">
                 At PRO-ICE, we learn and understand your organization, your peculiarities, strengths and weaknesses to proffer tailor-made solutions
               </p>
               <p class="text-justify">
@@ -370,18 +373,20 @@
                 <br><br>
 
                 <a href="#" class="btn btn-primary">Read More...</a>
-              </p>
+              </p>  --}}
                 
             </div>
           </div>
 
           <div class="col-md-3 wow fadeInUp" data-wow-delay="0.1s">
             <div class="about-col">
+            <a href="{{ route('/services') }}#bus_digit">
               <div class="img">
                 <img src="img/slider/slider4.jpg" alt="" class="img-fluid">
               </div>
-              <h2 class="title" style="color:#757575; margin-top: 0px;">Digitization & Digital Transformation</h2>
-              <p class="text-justify">
+              <h2 class="title mc" style=" font-size:22px;color:#757575; margin-top: 0px;">Digitization & Digital Transformation</h2>
+            </a><br>
+            {{--  <p class="text-justify">
                 With technological advances in Artificial Intelligence and Robotics, significant number of business processes is continually being automated.
               </p>
               <p class="text-justify">
@@ -389,25 +394,27 @@
                 <br><br>
 
                 <a href="#" class="btn btn-primary">Read More...</a>
-              </p>
+              </p> --}}
 
             </div>
           </div>
 
           <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
             <div class="about-col">
+            <a href="{{ route('/services') }}#bus_train">
               <div class="img">
                 <img src="img/slider/slider5.jpg" alt="" class="img-fluid">
               </div>
-              <h2 class="title" style="color:#757575; margin-top: 0px;">Human Recources Consulting & Training Services</h2>
-              <p class="text-justify">
+              <h2 class="title mc" style="font-size:22px; color:#757575; margin-top: 0px;">Human Recources Consulting & Training Services</h2>
+            </a><br>
+          {{--    <p class="text-justify">
                 Organizations are increasingly facing political, technological, environmental economic disruptions, thereby requiring a new breed of workers who are agile-minded to tap into the opportunities this evolving environment presents
               </p class="text-justify">
               <p class="text-justify">At PRO-ICE, enabling, developing and sharing knowledge with people is at the core of our services.
               <br><br>
 
                 <a href="#" class="btn btn-primary">Read More...</a> 
-              </p>
+              </p>  --}}
 
             </div>
           </div>
@@ -421,6 +428,14 @@
   
 
   <!-- Careers area start -->
+  <div class="container">
+    <div class="row">
+      <div class="container-fluid">
+        <div class="embed-container"><iframe width="560" height="315" src="{{$url->url}}" frameborder="0" allowfullscreen=""> </iframe> </div> 
+      </div>
+    </div>
+  </div>
+
   <div id="careers" class="faq-area area-padding">
     <div class="container">
       <div class="row">
@@ -1047,11 +1062,11 @@
 </html>
 
 <script>
-    $(document).ready(function(){
-        $('#srv').hide();
+    // $(document).ready(function(){
+    //     $('#srv').hide();
 
-        $('#ourSer').on('click', function(){
-            $('#srv').show();
-        })
-    })
+    //     $('#ourSer').on('click', function(){
+    //         $('#srv').show();
+    //     })
+    // })
 </script>

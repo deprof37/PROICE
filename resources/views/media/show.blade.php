@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -56,9 +55,6 @@
                       <div class="form-group">
                           <input type="submit" name="save" id="save" value="Update Media" class="btn btn-success btn-md btn-block"/>
                       </div>
-                      <div class="form-group">
-                          <button type="button" class="btn btn-md btn-block btn-danger" data-dismiss="modal">Close</button>
-                      </div>      
                   </form>
               </div>
               

@@ -2286,6 +2286,59 @@ span.email-notes {
 #clients .owl-dot.active {
   background-color: #18d26e;
 }
+
+/***** Youtube Responsive Code *****/  
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    height: auto; 
+}   
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+@font-face {
+font-family: "PANTHER";
+src: url("../fonts/PANTHER.ttf") format("truetype");
+src: 
+url("../fonts/PANTHER.woff") format("woff"),
+url("../fonts/PANTHER.eot"),
+url("../fonts/PANTHER.otf") format("opentype"),
+url("../fonts/PANTHER.svg#filename") format("svg");
+}
+
+.md{
+  font-family: 'PANTHER', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  color: #d6cc70;
+}
+
+@font-face {
+font-family: "Bellerose";
+src: url("../fonts/Bellerose.ttf") format("truetype");
+src: 
+url("../fonts/Bellerose.woff") format("woff"),
+url("../fonts/Bellerose.eot"),
+url("../fonts/Bellerose.otf") format("opentype"),
+url("../fonts/Bellerose.svg#filename") format("svg");
+}
+
+.mc{
+  font-family: 'Bellerose', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  color: #d6cc70;
+}
 /*----------------------------------------
  .End CSS
 ----------------------------------------*/

@@ -44,7 +44,7 @@
                         @endif
                       </div>
 
-                      <div class="form-group">
+                  {{--    <div class="form-group">
                         <label>Image</label>
                         <input type="file" name="photo" value="{{old('photo')}}" id="photo" class="form-control">
                         @if ($errors->has('photo'))
@@ -52,13 +52,10 @@
                         		<strong>{{ $errors->first('photo') }}</strong>
                         	</span>
                         @endif
-                      </div>
+                      </div>  --}}
                       <div class="form-group">
                           <input type="submit" name="save" id="save" value="Save Media" class="btn btn-primary btn-md btn-block"/>
                       </div>
-                      <div class="form-group">
-                          <button type="button" class="btn btn-md btn-block btn-danger" data-dismiss="modal">Close</button>
-                      </div>      
                   </form>
               </div>
               

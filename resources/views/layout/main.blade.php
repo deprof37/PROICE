@@ -66,7 +66,7 @@
                                     </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ route('/') }}">
-                  <h1 style="font-size: 22px;"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>PRO-ICE LIMITED</h1>
+                  <h1 class="md" style="font-size: 35px; color: #d6cc70"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
                                 </a>
@@ -82,10 +82,10 @@
                   </li>
                   <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Solutions<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                      <li><a class="page-scroll" href="#bus_consult">Business Consulting</a></li>
-                      <li><a class="page-scroll" href="#bus_digit">Digitization & Digital Transformation</a></li>
-                      <li><a class="page-scroll" href="#bus_auto">Business & Robotic Process Automation</a></li>
-                      <li><a class="page-scroll" href="#bus_train">Human Resources Consulting & Training Service</a></li>
+                      <li><a class="page-scroll" href="{{ route('/services') }}#bus_consult">Business Consulting</a></li>
+                      <li><a class="page-scroll" href="{{ route('/services') }}#bus_digit">Digitization & Digital Transformation</a></li>
+                      <li><a class="page-scroll" href="{{ route('/services') }}#bus_auto">Business & Robotic Process Automation</a></li>
+                      <li><a class="page-scroll" href="{{ route('/services') }}#bus_train">Human Resources Consulting & Training Service</a></li>
                     </ul>
                   </li>
                   
@@ -102,7 +102,7 @@
                   </li>
 
                   <li>
-                    <a class="page-scroll" href="">Media Center</a>
+                    <a class="page-scroll" href="{{route('medias')}}">Media Center</a>
                   </li>
 
                   <li>
