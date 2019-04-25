@@ -45,8 +45,6 @@
 
 <body data-spy="scroll" data-target="#navbar-example">
 
-  <div id="preloader"></div>
-
   <header>
     <!-- header-area start -->
     <div id="sticker" class="header-area">
@@ -59,17 +57,17 @@
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ route('/') }}">
-                  <h1 class="md" style="font-size: 35px; color: #d6cc70"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
+                  <h1 class="md" style="font-size: 35px; color: #c0b765"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
-                                </a>
+                </a>
               </div>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
@@ -78,7 +76,7 @@
                     <a class="page-scroll" href="{{ route('/') }}">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="{{ route('/') }}#about">About</a>
+                    <a class="page-scroll" href="{{ route('/') }}#about">About Us</a>
                   </li>
                   <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Solutions<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -89,12 +87,25 @@
                     </ul>
                   </li>
                   
-                  <li>
-                    <a class="page-scroll" href="{{ route('/') }}#careers">Industries</a>
+                 {{-- <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Industries<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_consult">Financial Services & Banks</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_digit">Manufacturing & Industrial Products</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_auto">Consumer Products</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Distribution & Wholesale</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Energy & Utilities</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Government & Public Sector</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Health Care & Life Sciences</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Insurance</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Telecoms</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Retail</a></li>
+                    </ul>
+                  </li>  --}}
+                   <li>
+                    <a class="page-scroll" href="{{ route('/industries') }}">Industries</a>
                   </li>
-
                   <li>
-                    <a class="page-scroll" href="{{ route('/') }}#careers">Careers</a>
+                    <a class="page-scroll" href="{{ route('/careers') }}">Careers</a>
                   </li>
 
                   <li>
@@ -141,26 +152,10 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2 style="font-size: 18px; color: white;"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>PRO-ICE LIMITED</h2>
+                  <h2 class="md" style="font-size: 28px; color: #c0b765;"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h2>
                 </div>
 
-                <p style="color: white;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-google"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-pinterest"></i></a>
-                    </li>
-                  </ul>
-                </div>
+                <p class="text-justify" style=" color: white;">PRO-ICE is a Business and Technology Solutions Company. We have a combined year of more than 40 years experience in providing Human Resources Services and Business Technology Solutions</p>
               </div>
             </div>
           </div>
@@ -186,10 +181,12 @@
             <h4 style="color: white;">Useful Links</h4>
             <ul>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}">Home</a></li>
-              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}#about">About us</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}#about">About Us</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/services') }}">Services</a></li>
-              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}#careers">Careers</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/careers') }}">Careers</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/industries') }}">Industries</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}#team">Our Team</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('medias') }}">Media Center</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/') }}#contact">Contact Us</a></li>
             </ul>
           </div>

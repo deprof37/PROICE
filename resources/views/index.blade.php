@@ -65,7 +65,7 @@
                                     </button>
                 <!-- Brand -->
                 <a class="navbar-brand page-scroll sticky-logo" href="{{ route('/') }}">
-                  <h1 class="md" style="font-size: 35px; color: #d6cc70"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
+                  <h1 class="md" style="font-size: 35px; color: #c0b765"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>P&nbsp;R&nbsp;O&nbsp;-&nbsp;I&nbsp;C&nbsp;E&nbsp; &nbsp;L&nbsp;I&nbsp;M&nbsp;I&nbsp;T&nbsp;E&nbsp;D&nbsp;</h1>
                   <!-- Uncomment below if you prefer to use an image logo -->
                   <!-- <img src="img/logo.png" alt="" title=""> -->
                                 </a>
@@ -77,7 +77,7 @@
                     <a class="page-scroll" href="#home">Home</a>
                   </li>
                   <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#about">About Us</a>
                   </li>
                   <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Solutions<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -87,13 +87,27 @@
                       <li><a class="page-scroll" href="{{ route('/services') }}#bus_train">Human Resources Consulting & Training Service</a></li>
                     </ul>
                   </li>
-                  
+
+              {{-- <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Industries<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#fin">Financial Services & Banks</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#man">Manufacturing & Industrial Products</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#con">Consumer Products</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Distribution & Wholesale</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Energy & Utilities</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Government & Public Sector</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Health Care & Life Sciences</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Insurance</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Telecoms</a></li>
+                      <li><a class="page-scroll" href="{{ route('/industries') }}#bus_train">Retail</a></li>
+                    </ul>
+                  </li>  --}}
                   <li>
-                    <a class="page-scroll" href="#careers">Industries</a>
+                    <a class="page-scroll" href="{{ route('/industries') }}">Industries</a>
                   </li>
 
                   <li>
-                    <a class="page-scroll" href="#careers">Careers</a>
+                    <a class="page-scroll" href="{{route('/careers')}}">Careers</a>
                   </li>
 
                   <li>
@@ -269,9 +283,9 @@
 
         <header class="section-header" align="left">
           <br>
-          <h3>About Us</h3>
+          
           <div class="single-well">
-            <p class="text-justify">PRO-ICE is a Business and Technology Solutions Company. We have a combined year of more than 40 years experience in providing Human Resources Services and Business Technology Solutions, including:
+            <p class="text-justify"><strong style="font-size: 22px; color:#c0b765">PRO-ICE</strong> is a Business and Technology Solutions Company. We have a combined year of more than 40 years experience in providing Human Resources Services and Business Technology Solutions, including:
             <ul>
                 <li><i class="fa fa-check"></i>Digitization & Digital Transformation</li>
                 <li><i class="fa fa-check"></i>Business Automation & Robotic Process Automation</li>
@@ -427,7 +441,7 @@
 
   
 
-  <!-- Careers area start -->
+  <!--Embeded Video -->
   <div class="container">
     <div class="row">
       <div class="container-fluid">
@@ -436,268 +450,12 @@
     </div>
   </div>
 
-  <div id="careers" class="faq-area area-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-sm-12 col-xs-12">
-          <div class="faq-details">
-            <div class="panel-group" id="accordion">
-                <div class="section-headline text-center">
-                  <br><br>
-                    <h2 style="color: white"><strong>INDUSTRIES</strong></h2>
-                </div>
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                        <a data-toggle="collapse" class="active" data-parent="#accordion" href="#check1">
-                        <span class="acc-icons"></span><strong>o    Financial Services & Banks</strong>
-                        </a>
-                    </h4>
-                </div>
-                <div id="check1" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      In this dynamic and fast paced evolving environment, we penetrate through to solve our client’s business optimization challenges and assist them in having competitive advantage centered on innovation. Our solutions permeate through key financial services such as retail banking, capital markets, wealth management, commercial banking, cards & payments).
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check2">
-                                                <span class="acc-icons"></span><strong>o    Manufacturing & Industrial Products</strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check2" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      A manufacturing firm will always have many moving parts. The team at PRO-ICE is equipped to optimize as well as automate processes which will lead to increased productivity and greater effectiveness and efficiency.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check3">
-                                                <span class="acc-icons"></span><strong>o    Consumer Products</strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check3" class="panel-collapse collapse ">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      Consumers are increasingly savvy and want to connect more with your organization and brand. We can help use the power of data driven insights to discover new markets, position favorably against competition and best meet the demand of consumers.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check4">
-                                                <span class="acc-icons"></span><strong>o    Distribution & Wholesale </strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check4" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      PRO-ICE is well equipped to guide your organization in understanding the market dynamics and trends of this ever changing industry. Our team will guide you in creating a digital and business re-engineering road map.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check5">
-                                                <span class="acc-icons"></span><strong>o    Energy & Utilities</strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check5" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      The energy and utility industry has been severely disrupted, with the infusion of new technology/ energy sources and increased demand for electricity as a result of increased population. We turnaround processes for optimization and increased productivity via process automation and human resource rejuvenation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check6">
-                                                <span class="acc-icons"></span><strong>o    Government & Public Sector </strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check6" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      The public sector is quite constrained majorly by challenges around budget cuts and increased expectations from citizens. It is therefore imperative that government agencies and departments work in smart, efficient and effective ways. This is where PRO-ICE comes in, to help these agencies of government implement digital transformation applications and all strategic efficiencies.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check7">
-                                                <span class="acc-icons"></span><strong>o    Healthcare and Life sciences </strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check7" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      The goal of most health institutions is to deliver transformative care outcomes, while reducing cost substantially. With our innovative approaches; efficiency and effectiveness is achieved, as well as exchange of health information and patient experience centricity.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check8">
-                                                <span class="acc-icons"></span><strong>o    Insurance</strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check8" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      The digital environment has not spared the insurance industry, as it is dependent on innovation in introducing products faster, improving efficiency and lowering operational costs. At PRO-ICE, we build systems and enhance the people who use these systems to generate increased productivity and profitability.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check9">
-                                                <span class="acc-icons"></span><strong>o    Telecoms </strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check9" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      It can only be described as break-neck, the speed at which the telecoms industry evolves. We are positioned to automate and transform processes for better service delivery for employees and the consumers.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-              <!-- Panel Default -->
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="check-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#check10">
-                                                <span class="acc-icons"></span><strong>o    Retail </strong>
-                                            </a>
-                                        </h4>
-                </div>
-                <div id="check10" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <p class="text-justify">
-                      PRO-ICE is strategically positioned and equipped to guide retailers on the fast-evolving tech trends in the retail industry. Our team will guide on setting you on the path of digital transformation for lowered cost and increased productivity via business process automation and overall Human resource capacity building.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <!-- End Panel Default -->
-            </div>
-          </div>
-        </div>
 
-        <div class="col-md-6 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <br><br>
-            <h2 style="color: white">Careers in <strong class="text-warning">PRO-ICE LIMITED</strong></h2>
-          </div>
-        </div>
-              
-        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-          <div class="tab-menu">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li class="active">
-                <a href="#p-view-2" role="tab" data-toggle="tab">Life @ PRO-ICE</a>
-              </li>
-            </ul>
-          </div>
-          <div class="tab-content" style="background: #ededed;">
-            <div class="tab-pane active" id="p-view-2">
-              <div class="tab-inner">
-                <div class="event-content head-team">
-                  <h4><strong>Life @ PRO-ICE</strong></h4>
-                  <p class="text-justify">
-                    It is not just about the work you dp, it's about making every day count. Our growth depends on the quality of our people.
-                  </p>
-                  <p class="text-justify">
-                    It is very crucial that we build a culture and eco-system that breeds talent. What inspires us is the ability to deliver top quality services to clients, as well as enabling positive change in society.
-                  </p>
-                  <p class="text-justify">
-                    <ul>
-                      <li style="font-size: 18px;" class="text-primary">
-                        <i class="fa fa-check text-primary"></i><strong>Entry Level Hires</strong>
-                      </li>
-                    </ul>
-                    We offer places for fresh graduates that comes with unlimited opportunities
-                  </p>
-                  <p class="text-justify">
-                    <ul>
-                      <li style="font-size: 18px;">
-                        <i class="fa fa-check"></i><strong>Experienced Hires</strong>
-                      </li>
-                    </ul>
-                    We value fresh prospectivesness that proven and talented people bring to our organization. If you ooze quality and want to impact the world positively, we are in sync.
-                  </p>
-
-                  <p class="text-justify">
-                    <ul>
-                      <li style="font-size: 18px;" class="text-success">
-                        <i class="fa fa-check text-success"></i><strong>Career Opportunity</strong>
-                      </li>
-                    </ul>
-                    Keep up date on openings - Connect with us and send your resume to <strong><i class="text-primary">careers@pro-ice.com.ng</i></strong>
-                  </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end Row -->
-    </div>
-  </div>
-  <!-- End Faq Area -->
 
   
 
   <!-- Start team Area -->
-  <div id="team" class="our-team-area area-padding">
+  <div id="team" class="our-team-area area-padding" style="background: #9b9b9b;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -846,57 +604,6 @@
     <!--==========================
       Partners Section
     ============================-->
-
-
-  <!-- Start Testimonials -->
-  <div class="testimonials-area">
-    <div class="testi-inner area-padding">
-      <div class="testi-overly"></div>
-      <div class="container ">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <!-- Start testimonials Start -->
-            <div class="testimonial-content text-center">
-              <a class="quate" href="#"><i class="fa fa-quote-right"></i></a>
-              <!-- start testimonial carousel -->
-              <div class="testimonial-carousel">
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Boby</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Jhon</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-                <div class="single-testi">
-                  <div class="testi-text">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar luctus est eget congue.<br>consectetur adipiscing elit. Sed pulvinar luctus est eget congue.
-                    </p>
-                    <h6>Fleming</h6>
-                  </div>
-                </div>
-                <!-- End single item -->
-              </div>
-            </div>
-            <!-- End testimonials end -->
-          </div>
-          <!-- End Right Feature -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Testimonials -->
     
   
 
@@ -966,26 +673,10 @@
             <div class="footer-content">
               <div class="footer-head">
                 <div class="footer-logo">
-                  <h2 style="font-size: 18px; color: white;"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>PRO-ICE LIMITED</h2>
+                  <h2 style="font-size: 18px; color: #c0b765;"><span><img src="img/ProIce.png" alt="" title="#slider-direction-1" /></span>PRO-ICE LIMITED</h2>
                 </div>
 
-                <p style="color: white;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
-                <div class="footer-icons">
-                  <ul>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-google"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i style="color: white;" class="fa fa-pinterest"></i></a>
-                    </li>
-                  </ul>
-                </div>
+                <p class="text-justify" style=" color: white;">PRO-ICE is a Business and Technology Solutions Company. We have a combined year of more than 40 years experience in providing Human Resources Services and Business Technology Solutions</p>
               </div>
             </div>
           </div>
@@ -993,7 +684,7 @@
           <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="footer-content">
               <div class="footer-head">
-                <h4 style="color: white;">information</h4>
+                <h4 style="color: white;">INFORMATION</h4>
                 <p style="color: white;">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
@@ -1011,10 +702,12 @@
             <h4 style="color: white;">Useful Links</h4>
             <ul>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#home">Home</a></li>
-              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#about">About us</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#about">About Us</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="">Services</a></li>
-              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#careers">Careers</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/careers') }}">Careers</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('/industries') }}">Industries</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#team">Our Team</a></li>
+              <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="{{ route('medias') }}">Media Center</a></li>
               <li style="margin-bottom: 10px;"><i class="ion-ios-arrow-right" style="color: white;"></i> <a style="color: white;" href="#contact">Contact Us</a></li>
             </ul>
           </div>

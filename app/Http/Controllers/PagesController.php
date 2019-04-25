@@ -22,4 +22,12 @@ class PagesController extends Controller
     	$media = Mediacenter::all();
     	return view('mediasCenter', ['media'=>$media]);
     }
+
+    public function industries(){
+        return view('industries');
+    }
+
+    public function careers(){
+        return view('careers');
+    }
 }

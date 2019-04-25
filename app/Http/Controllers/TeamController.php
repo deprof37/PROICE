@@ -2,35 +2,51 @@
 
 namespace App\Http\Controllers;
 
-use App\Partner;
+use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Image;
 use Auth;
 use Validator;
 
-class PartnerController extends Controller
+class TeamController extends Controller
 {
-    public function __construct()
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $this->middleware('auth');
+        $team = Team::all();
+        $teamCount = count($team);
+            return view('team.index', ['team'=>$team, 'teamCount' =>$teamCount]);
     }
 
-
-    public function index(){
-        $partner = Partner::all();
-        $partnerCount = count($partner);
-            return view('partner.index', ['partner'=>$partner, 'partnerCount' =>$partnerCount]);
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('team.create');
     }
 
-    public function create(){
-        return view('partner.create');
-    }
-
-    public function store(Request $request){
-        
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
         $validator = \Validator::make($request->all(), [
-                'partner_name' => ['bail', 'required', 'string', 'max:100'],
+                'first_name' => ['bail', 'required', 'alpha', 'max:50'],
+                'last_name' => ['bail', 'required', 'alpha', 'max:50'],
+                'position' => ['bail', 'required', 'string', 'max:100'],
+                'fb_link' => ['bail', 'required', 'url', 'max:255'],
+                'tw_link' => ['bail', 'required', 'url', 'max:255'],
                 'photo' => ['bail', 'required', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
         ]);
 
@@ -56,11 +72,11 @@ class PartnerController extends Controller
                     $filenameToStore = $filename.'_'.time().'.'.$extension;
                     
                     //Upload Image
-					$path = $request->file('photo')->storeAs('public/partner_images', $filenameToStore);
+                    $path = $request->file('photo')->storeAs('public/team_images', $filenameToStore);
 
                     //Resize image here
-                    $thumbnailpath = public_path('storage/partner_images/'.$filenameToStore);
-                    $img = Image::make($thumbnailpath)->resize(150, 150, function($constraint) {
+                    $thumbnailpath = public_path('storage/team_images/'.$filenameToStore);
+                    $img = Image::make($thumbnailpath)->resize(520, 640, function($constraint) {
                             $constraint->aspectRatio();
                         });
                         $img->save($thumbnailpath); 
@@ -70,25 +86,29 @@ class PartnerController extends Controller
                     $filenameToStore = 'noimage.jpg';
                }
 
-               Partner::create([
-                        'name' => $request['partner_name'],
+               Team::create([
+                        'first_name' => $request['first_name'],
+                        'last_name' => $request['last_name'],
+                        'position' => $request['position'],
+                        'fb_link' => $request['fb_link'],
+                        'tw_link' => $request['tw_link'],
                         'path' => $filenameToStore,
                         'user_id' => Auth::user()->id
                ]);
-               return redirect()->route('partner')->with('success', 'Partner Created successfully');
+               return redirect()->route('team')->with('success', 'New Team Member Added Successfully');
            }
-            
     }
+
     /**
      * Display the specified resource.
      *
-     * @param  \App\Partner  $Partner
+     * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function show($id=null)
     {
-        $part = Partner::findOrFail($id);
-        return view('partner.show', ['part'=>$part]);
+        $tm = Team::findOrFail($id);
+        return view('team.show', ['tm'=>$tm]);
     }
 
     
@@ -96,28 +116,36 @@ class PartnerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Partner  $Partner
+     * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id=null)
     {
-            //$partner = Partner::findOrFail($id);
+        $team = Team::findOrFail($id);
         $validator = \Validator::make($request->all(), [
-                'partner_name' => ['bail', 'required', 'string', 'max:100'],
+                'first_name' => ['bail', 'required', 'alpha', 'max:50'],
+                'last_name' => ['bail', 'required', 'alpha', 'max:50'],
+                'position' => ['bail', 'required', 'string', 'max:100'],
+                'fb_link' => ['bail', 'required', 'url', 'max:255'],
+                'tw_link' => ['bail', 'required', 'url', 'max:255'],
                 'photo' => ['bail', 'required', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
         ]);
 
             if ($validator->fails()){
+                 //return Response::json(['errors' => $validator->errors()]);
                  return back()->withInput()->with(['errors' => $validator->errors()]);
             }
 
             else{
 
                 if ($request->hasFile('photo')) {
-                  
+
+                    if($team->path !== 'noimage.jpg'){
+                        
                         //Delete the formal image
-                        Storage::delete('public/partner_images/'.$partner->path);
-                 
+                        Storage::delete('public/team_images/'.$team->path);
+                    }
+                    
                     //Get Filename with extension
                     $filenameWithExtension = $request->file('photo')->getClientOriginalName();
                     
@@ -126,55 +154,53 @@ class PartnerController extends Controller
                     
                     //Get just the extension
                     $extension = $request->file('photo')->getClientOriginalExtension();
-
+                    
                     //File to store
                     $filenameToStore = $filename.'_'.time().'.'.$extension;
                     
                     //Upload Image
-                    $path = $request->file('photo')->storeAs('public/partner_images', $filenameToStore); 
+                    $path = $request->file('photo')->storeAs('public/team_images', $filenameToStore);
 
                     //Resize image here
-                    $thumbnailpath = public_path('storage/partner_images/'.$filenameToStore);
-                    $img = Image::make($thumbnailpath)->resize(150, 150, function($constraint) {
+                    $thumbnailpath = public_path('storage/team_images/'.$filenameToStore);
+                    $img = Image::make($thumbnailpath)->resize(520, 640, function($constraint) {
                             $constraint->aspectRatio();
                         });
                         $img->save($thumbnailpath); 
 
                }
                else{
-
-                    // if($partner->path !== 'noimage.jpg'){
-                        
-                    //     //Delete the formal image
-                    //     Storage::delete('public/partner_images/'.$partner->path);
-                    // }
-                    
                     $filenameToStore = 'noimage.jpg';
                }
 
-               Partner::where('id', $id)->update([
-                        'name' => $request['partner_name'],
+               Team::where('id', $id)->update([
+                        'first_name' => $request['first_name'],
+                        'last_name' => $request['last_name'],
+                        'position' => $request['position'],
+                        'fb_link' => $request['fb_link'],
+                        'tw_link' => $request['tw_link'],
                         'path' => $filenameToStore,
                         //'user_id' => Auth::user()->id
                ]);
-               return redirect()->route('partner')->with('success', 'Partner Updated successfully');
+               return redirect()->route('team')->with('success', 'Team Member Info Updated Successfully');
            }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Partner  $Partner
+     * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
     public function destroy($id=null)
     {
-        $partner = Partner::findOrFail($id);
+        $team = Partner::findOrFail($id);
 
-        Storage::delete('public/partner_images/'.$partner->path);
+        Storage::delete('public/team_images/'.$team->path);
         
-        $partner->delete();
+        $team->delete();
 
-        return redirect()->route('partner')->with('success', 'Partner Deleted successfully');
+        return redirect()->route('team')->with('success', 'Team Member Deleted successfully');
     }
+
 }

@@ -4,13 +4,13 @@
 
 @section('content')
 
-<div id="bus_consult" class="solution-area area-padding" style="background: #2d2d2d; color:white;">
+<div id="bus_consult" class="solution-area area-padding" style="background: #898989; color:white;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 class="md" style="color: #d6cc70">BUSINESS CONSULTING</h2>
+            <h2 class="md" style="color: #c0b765">BUSINESS CONSULTING</h2>
           </div>
         </div>
       </div>
@@ -71,15 +71,15 @@
     </div>
   </div>
 
-  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
-  <div id="bus_auto" class="solution-area area-padding" style="background: #a2a4aa;">
+  <div id="bus_auto" class="solution-area area-padding" style="background: whiteblack;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 class="md" style="color: black">BUSINESS AUTOMATION AND ROBOTIC PROCESS AUTOMATION</h2>
+            <h2 class="md" style="color: #c0b765">BUSINESS AUTOMATION AND ROBOTIC PROCESS AUTOMATION</h2>
           </div>
         </div>
       </div>
@@ -97,22 +97,22 @@
           <div class="well-middle">
             <div class="single-well">
               
-              		<p class="text-justify" style="color: white;">
+              		<p class="text-justify" style="color: black;">
 			    		One of the ways we drive digital transformation at PRO-ICE LTD  is through the use of Robotic Process Automation (RPA), which is capable of supporting the coordination of a project team and company management — as well as all involved employees — is a key driver in success. This leadership and consensus within an organization is an essential component of implementing new technology and fostering progress in any business in any industry, and this is also the case with RPAs place in fostering digital transformation.
 			    	</p>
-			    	<p class="text-justify" style="color: white;">
+			    	<p class="text-justify" style="color: black;">
 			    		<strong>HOW WE DEPLOY ROBOTIC PROCESS AUTOMATION (RPA) AT PRO-ICE LTD</strong>
 			    	</p>
-			    	<p class="text-justify" style="color: white;">
+			    	<p class="text-justify" style="color: black;">
 			    		RPA is a technology that allows businesses and organizations to configure software Robots to carry out routine rule based computer tasks in a way similar to a human employee. Robots can fill out documents, read and send emails, enter data into business applications and much more.
                   	</p>
-                  <p class="text-justify" style="color: white;">
+                  <p class="text-justify" style="color: black;">
 			    		With our partnership with UI Path, the global leader in RPA Technology, we deliver top-notch automation services that increases productivity, achieves cost savings and inevitably impacts on positive profitability.
                   </p>
-                  <p class="text-justify" style="color: white;">
+                  <p class="text-justify" style="color: black;">
 			    		RPA takes care of mundane, boring, repetitive tasks that add little value, while freeing members of staff to perform tactical and strategic functions which aids the business, as well as increasing job satisfaction.
                   </p>
-                  <p class="text-justify" style="color: white;">
+                  <p class="text-justify" style="color: black;">
 			    		At PRO-ICE, we provide end to end and semi-automated RPA service across different functions and units of the organization, from Accounting, Finance, Supply Chain to Human Resources and Sales & Marketing.
                   </p>
             </div>
@@ -123,16 +123,16 @@
     </div>
   </div>
 
-  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
 
-  <div id="bus_digit" class="solution-area area-padding" style="background: black">
+  <div id="bus_digit" class="solution-area area-padding" style="background: #5f6060">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 class="md" style="color: #d6cc70">DIGITIZATION AND DIGITAL TRANSFORMATION</h2>
+            <h2 class="md" style="color: #c0b765">DIGITIZATION AND DIGITAL TRANSFORMATION</h2>
           </div>
         </div>
       </div>
@@ -187,7 +187,7 @@
     </div>
   </div>
 
-  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
+  <hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 10px; margin-top:0px; margin-bottom:3px">
   <br>
 
   <div id="bus_train" class="solution-area area-padding" style="background: white; color:white;">
@@ -196,7 +196,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center text-white">
           	<br></br><br>
-            <h2 class="md" style="color: black">HUMAN RESOURCES CONSULTING AND TRAINING SERVICES</h2>
+            <h2 class="md" style="color: #c0b765">HUMAN RESOURCES CONSULTING AND TRAINING SERVICES</h2>
           </div>
         </div>
       </div>
@@ -247,6 +247,6 @@
       </div>
     </div>
   </div>
-<hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,20), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 40px; margin-top:0px; margin-bottom:3px">
+<hr style="background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0, 0, 0,20), rgba(0,0,0,0)); height: 20px; margin-top:0px; margin-bottom:3px">
 
 @endsection

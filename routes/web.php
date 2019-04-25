@@ -16,9 +16,13 @@ Route::get('/', 'PagesController@index')->name('/');
 
 Route::get('/services', 'PagesController@services')->name('/services');
 
-Route::get('/welcome', function(){
-	return view('welcome');
-});
+Route::get('/industries', 'PagesController@industries')->name('/industries');
+
+Route::get('/careers', 'PagesController@careers')->name('/careers');
+
+// Route::get('/welcome', function(){
+// 	return view('welcome');
+// });
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -44,4 +48,18 @@ Route::post('/partner-update/{id?}', 'PartnerController@update')->name('partner-
 
 Route::any('/partner-delete/{id?}', 'PartnerController@destroy')->name('partner-delete');
 
+Route::get('/team', 'TeamController@index')->name('team');
+
+Route::get('/team-create', 'TeamController@create')->name('team-create');
+
+Route::get('/team-show/{id?}', 'TeamController@show')->name('team-show');
+
+Route::post('/team-save', 'TeamController@store')->name('team-save');
+
+Route::post('/team-update/{id?}', 'TeamController@update')->name('team-update');
+
+Route::any('/team-delete/{id?}', 'TeamController@destroy')->name('team-delete');
+
 Route::get('/medias', 'PagesController@medias')->name('medias');
+
+
