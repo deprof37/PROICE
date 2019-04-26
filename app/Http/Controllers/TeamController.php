@@ -45,8 +45,6 @@ class TeamController extends Controller
                 'first_name' => ['bail', 'required', 'alpha', 'max:50'],
                 'last_name' => ['bail', 'required', 'alpha', 'max:50'],
                 'position' => ['bail', 'required', 'string', 'max:100'],
-                'fb_link' => ['bail', 'required', 'url', 'max:255'],
-                'tw_link' => ['bail', 'required', 'url', 'max:255'],
                 'photo' => ['bail', 'required', 'image', 'mimes:jpeg,png,jpg', 'max:1999'] 
         ]);
 

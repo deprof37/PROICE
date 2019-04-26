@@ -23,6 +23,16 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+
+        //Insert default records
+        DB::table('users')->insert(
+            array(
+                'name' => 'Olusola Fatoye',
+                'email' => 'olusolafatoy@gmail.com',
+                'password' => Hash::make('fame1234')
+            )
+        ); 
     }
 
     /**

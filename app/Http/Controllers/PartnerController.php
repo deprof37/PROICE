@@ -60,7 +60,7 @@ class PartnerController extends Controller
 
                     //Resize image here
                     $thumbnailpath = public_path('storage/partner_images/'.$filenameToStore);
-                    $img = Image::make($thumbnailpath)->resize(150, 150, function($constraint) {
+                    $img = Image::make($thumbnailpath)->resize(100, 100, function($constraint) {
                             $constraint->aspectRatio();
                         });
                         $img->save($thumbnailpath); 
@@ -135,7 +135,7 @@ class PartnerController extends Controller
 
                     //Resize image here
                     $thumbnailpath = public_path('storage/partner_images/'.$filenameToStore);
-                    $img = Image::make($thumbnailpath)->resize(150, 150, function($constraint) {
+                    $img = Image::make($thumbnailpath)->resize(100, 100, function($constraint) {
                             $constraint->aspectRatio();
                         });
                         $img->save($thumbnailpath); 

@@ -31,9 +31,12 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style2.css" rel="stylesheet">
 
   <!-- Responsive Stylesheet File -->
   <link href="css/responsive.css" rel="stylesheet">
+
+  
 
   <!-- =======================================================
     Theme Name: eBusiness
@@ -350,7 +353,7 @@
 
         <header class="section-header" align="center">
           <br><br>
-          <h3 style="color: #757575"><strong><button type="button" id="ourSer">Our Services</button></strong></h3>
+          <h3 style="color: #757575"><strong>Our Services</strong></h3>
         </header>
         <br>
         <div class="row about-cols" id="srv">
@@ -445,7 +448,9 @@
   <div class="container">
     <div class="row">
       <div class="container-fluid">
-        <div class="embed-container"><iframe width="560" height="315" src="{{$url->url}}" frameborder="0" allowfullscreen=""> </iframe> </div> 
+        @isset($url)
+          <div class="embed-container"><iframe width="560" height="315" src="{{$url->url}}" frameborder="0" allowfullscreen=""> </iframe> </div>
+        @endisset 
       </div>
     </div>
   </div>
@@ -455,151 +460,112 @@
   
 
   <!-- Start team Area -->
-  <div id="team" class="our-team-area area-padding" style="background: #9b9b9b;">
+  <div id="team" class="our-team-area area-padding" style="background: #ffffff;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
           <div class="section-headline text-center">
             <br><br>
-            <h2 style="color: #232ca3;">Our Team</h2>
+            <h2 style="color: #757575">Our Team</h2>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="team-top">
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#"><img src="img/team/1.jpg" alt=""></a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                  </ul>
+          @if($teamCount > 0)
+            @foreach($team as $tm)
+              <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="single-team-member">
+                  <div class="team-img">
+                    <img src="/storage/team_images/{{$tm->path}}" alt="image">
+                    <div class="team-social-icon text-center">
+                      <ul>
+                        <li>
+                          <a href="{{$tm->fb_link}}"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="{{$tm->tw_link}}"><i class="fa fa-twitter"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-content text-center">
+                    <h4>{{$tm->first_name . " " . $tm->last_name}}</h4>
+                    <p>{{$tm->position}}</p>
+                  </div>
                 </div>
               </div>
-              <div class="team-content text-center">
-                <h4>Jhon Mickel</h4>
-                <p>Seo</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#"> <img src="img/team/2.jpg" alt=""></a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Andrew Arnold</h4>
-                <p>Web Developer</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#"><img src="img/team/3.jpg" alt=""></a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Lellien Linda</h4>
-                <p>Web Design</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
-          <div class="col-md-3 col-sm-3 col-xs-12">
-            <div class="single-team-member">
-              <div class="team-img">
-                <a href="#"><img src="img/team/4.jpg" alt=""></a>
-                <div class="team-social-icon text-center">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-instagram"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="team-content text-center">
-                <h4>Jhon Powel</h4>
-                <p>Seo Expert</p>
-              </div>
-            </div>
-          </div>
-          <!-- End column -->
+          @endforeach
+        @endif
         </div>
       </div>
     </div>
   </div>
   <!-- End Team Area -->
-
-  <br>
-
    
   <!--==========================
       Partners Section
     ============================-->
-    <!--div id="clients" class="wow fadeInUp">
-      <div class="container">
+<div id="about" class="about-area area-padding">
+    
+    <div class="container">
+        <div class="row about-cols">
+          <h3 style="text-align:center; padding: 20px; color: #757575">Our Partners</h3>
+            @if($ptCount > 0)
+              @foreach($pt as $partner)
+                <div class="col-md-4">
+                  <div class="about-col">
+                    <div class="img">
+                      <img title={{$partner->name}} src="/storage/partner_images/{{$partner->path}}" alt="image" class="img-fluid" width="auto" height="auto">
+                    </div>
+                  </div>
+                </div>
+              @endforeach
+            @else
+                <p class="text-center">No Partner available</p>
+            @endif
+
+        </div>
+      </div>
+    </div>
+ {{--  <div class="container" style="background: #e5e3e3; width: auto; height: auto;">
+      <h3 style="text-align:center; padding: 20px; color: #757575">Our Partners</h3>
+      <section class="customer-logos slider">
+           @if($ptCount > 0)
+              @foreach($pt as $partner)
+                <div class="slide"><img src="/storage/partner_images/{{$partner->path}}" alt="image"></div>
+              @endforeach
+              @else
+                <p class="text-center">No Partner available</p>
+            @endif
+      </section>
+
+    </div> 
+<div class="container" style="background: #e5e3e3; width: 100%; height: auto;">
+      
+        <h3 style="text-align:center; padding: 10px; color: #757575"><strong>Our Partners</strong></h3>
         <div class="row">
-        <header class="section-header" align="center">
-          <h3>Our Clients</h3>
-        </header>
-
-        <div class="col-md-4 col-sm-6 col-xs-6">
-          <img src="img/partner/uipath.jpg" alt="">
+          @if($ptCount > 0)
+              @foreach($pt as $partner)
+                <div class="card col-md-4" style="width:auto; margin-bottom: 30px; margin-left: 20px; margin-right: 20px;">
+                  <img title={{$partner->name}} src="/storage/partner_images/{{$partner->path}}" alt="image">
+                </div>
+              @endforeach
+          @endif
         </div>
-        <div class="col-md-4 col-sm-6 col-xs-6">
-          <img src="img/partner/sbsc.png" alt="">
-        </div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
-          <img src="img/partner/nasnav.jpeg" alt="">
-        </div>
-        </div>
-
-      </div>
-      </div>
-    </div><!-- #clients -->
+                  {{--  <div class="team-top">
+            <h3 style="text-align:center; margin-top: 5px; margin-bottom: 0px;">Our Partners</h3>
+            @if($ptCount > 0)
+              @foreach($pt as $partner)
+                <div class="col-md-3 col-sm-3 col-xs-6" align="center">
+                    <div class="img" style="padding: 20px; text-align:center; width:auto; height:auto;">
+                      <img title={{$partner->name}} src="/storage/partner_images/{{$partner->path}}" alt="image">
+                    </div>
+                </div>
+            @endforeach
+          @endif
+          </div>
+    </div>  --}}
 
     <!--==========================
       Partners Section
@@ -616,7 +582,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="section-headline text-center">
               <br><br>
-              <h2>Contact us</h2>
+              <h2 style="color: #757575">Contact us</h2>
             </div>
           </div>
         </div>
@@ -746,6 +712,7 @@
   <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
   <script src="lib/appear/jquery.appear.js"></script>
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
   
 
@@ -755,11 +722,26 @@
 </html>
 
 <script>
-    // $(document).ready(function(){
-    //     $('#srv').hide();
-
-    //     $('#ourSer').on('click', function(){
-    //         $('#srv').show();
-    //     })
-    // })
+    $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: false,
+            responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+            }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
 </script>

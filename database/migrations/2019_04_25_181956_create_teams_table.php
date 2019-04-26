@@ -18,8 +18,8 @@ class CreateTeamsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('position');
-            $table->string('fb_link');
-            $table->string('tw_link');
+            $table->string('fb_link')->nullable();
+            $table->string('tw_link')->nullable();
             $table->string('path');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
